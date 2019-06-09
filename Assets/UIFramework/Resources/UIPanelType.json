@@ -1,0 +1,25 @@
+{
+"infoList":
+  [
+    {
+      "panelTypeString": "Login",
+      "path": "UIPanel/LoginPanel"
+    },
+
+    {
+      "panelTypeString": "Message",
+      "path": "UIPanel/MessagePanel"
+    },
+
+    {
+      "panelTypeString": "Register",
+      "path": "UIPanel/RegisterPanel"
+    },
+
+    {
+      "panelTypeString": "Start",
+      "path": "UIPanel/StartPanel"
+    }
+
+  ]
+}
