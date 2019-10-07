@@ -11,6 +11,10 @@ public class StartPanel : BasePanel {
 
     private Animator btnAnimator;
 
+    private void OnStart()
+    {
+    }
+
     public override void OnEnter()
     {
         base.OnEnter();
@@ -22,6 +26,7 @@ public class StartPanel : BasePanel {
 
     private void OnLoginClick()
     {
+        PlayClickSound();
         uiManager.PushPanel(UIPanelType.Login);
     }
 

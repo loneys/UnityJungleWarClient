@@ -49,7 +49,10 @@ public class ClientManager:BaseManager
         //Debug.LogWarning("接收到一条数据：");
         try
         {
-
+            if(clientSocket==null ||clientSocket.Connected==false)
+            {
+                return;
+            }
             int count = clientSocket.EndReceive(ar);
 
             msg.ReadMessage(count, OnProcessDataCallback);

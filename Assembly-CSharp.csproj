@@ -6,7 +6,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{598BDEE7-27A9-3F2D-8C4A-0237A49E362D}</ProjectGuid>
+    <ProjectGuid>{B219E3E1-1BC8-4350-98EF-796B083F0C87}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -85,25 +85,51 @@
      <Compile Include="Assets\Res\ImageEffects\Scripts\Twirl.cs" />
      <Compile Include="Assets\Res\ImageEffects\Scripts\VignetteAndChromaticAberration.cs" />
      <Compile Include="Assets\Res\ImageEffects\Scripts\Vortex.cs" />
+     <Compile Include="Assets\Scrpites\Camera\FollowTarget.cs" />
      <Compile Include="Assets\Scrpites\GameFacade.cs" />
      <Compile Include="Assets\Scrpites\Manager\AudioManager.cs" />
      <Compile Include="Assets\Scrpites\Manager\BaseManager.cs" />
      <Compile Include="Assets\Scrpites\Manager\CameraManager.cs" />
      <Compile Include="Assets\Scrpites\Manager\PlayerManager.cs" />
      <Compile Include="Assets\Scrpites\Manager\RequestManager.cs" />
+     <Compile Include="Assets\Scrpites\Manager\UIManager.cs" />
+     <Compile Include="Assets\Scrpites\Model\UserData.cs" />
      <Compile Include="Assets\Scrpites\Net\ClientManager.cs" />
      <Compile Include="Assets\Scrpites\Net\Message.cs" />
+     <Compile Include="Assets\Scrpites\Player\Arrow.cs" />
+     <Compile Include="Assets\Scrpites\Player\PlayerAttack.cs" />
+     <Compile Include="Assets\Scrpites\Player\PlayerInfo.cs" />
+     <Compile Include="Assets\Scrpites\Player\PlayerMove.cs" />
+     <Compile Include="Assets\Scrpites\Player\RoleData.cs" />
+     <Compile Include="Assets\Scrpites\Request\AttackRequest.cs" />
      <Compile Include="Assets\Scrpites\Request\BaseRequest.cs" />
+     <Compile Include="Assets\Scrpites\Request\CreateRoomRequest.cs" />
+     <Compile Include="Assets\Scrpites\Request\GameOverRequest.cs" />
+     <Compile Include="Assets\Scrpites\Request\JoinRoomRequest.cs" />
+     <Compile Include="Assets\Scrpites\Request\ListRoomRequest.cs" />
      <Compile Include="Assets\Scrpites\Request\LoginRequest.cs" />
+     <Compile Include="Assets\Scrpites\Request\MoveRequest.cs" />
+     <Compile Include="Assets\Scrpites\Request\QuitBattleRequest.cs" />
+     <Compile Include="Assets\Scrpites\Request\QuitRoomRequest.cs" />
      <Compile Include="Assets\Scrpites\Request\RegisterRequest.cs" />
+     <Compile Include="Assets\Scrpites\Request\ShootRequest.cs" />
+     <Compile Include="Assets\Scrpites\Request\ShowTimerRequest.cs" />
+     <Compile Include="Assets\Scrpites\Request\StartGameRequest.cs" />
+     <Compile Include="Assets\Scrpites\Request\StartPlayRequest.cs" />
+     <Compile Include="Assets\Scrpites\Request\UpdateResultRequest.cs" />
+     <Compile Include="Assets\Scrpites\Request\UpdateRoomRequest.cs" />
      <Compile Include="Assets\Scrpites\UIPanel\BasePanel.cs" />
+     <Compile Include="Assets\Scrpites\UIPanel\GamePanel.cs" />
      <Compile Include="Assets\Scrpites\UIPanel\LoginPanel.cs" />
      <Compile Include="Assets\Scrpites\UIPanel\MessagePanel.cs" />
      <Compile Include="Assets\Scrpites\UIPanel\RegisterPanel.cs" />
+     <Compile Include="Assets\Scrpites\UIPanel\RoomItem.cs" />
+     <Compile Include="Assets\Scrpites\UIPanel\RoomListPanel.cs" />
+     <Compile Include="Assets\Scrpites\UIPanel\RoomPanel.cs" />
      <Compile Include="Assets\Scrpites\UIPanel\StartPanel.cs" />
+     <Compile Include="Assets\Tools\DestroyForTime.cs" />
+     <Compile Include="Assets\Tools\UnityTools.cs" />
      <Compile Include="Assets\UIFramework\Extension\DictionaryExtension.cs" />
-     <Compile Include="Assets\UIFramework\Manager\GameRoot.cs" />
-     <Compile Include="Assets\UIFramework\Manager\UIManager.cs" />
      <Compile Include="Assets\UIFramework\UIPanel\UIPanelInfo.cs" />
      <Compile Include="Assets\UIFramework\UIPanel\UIPanelType.cs" />
      <None Include="Assets\Res\ImageEffects\Shaders\_BloomAndFlares\BlendOneOne.shader" />
@@ -190,25 +216,25 @@
  <HintPath>D:/Program Files/Unity5.6.1/Editor/Data/UnityExtensions/Unity/UnityVR/RuntimeEditor/UnityEngine.VR.dll</HintPath>
  </Reference>
  <Reference Include="DemiLib">
- <HintPath>D:/UnityProject/OnlineGame/Assets/Demigiant/DemiLib/Core/DemiLib.dll</HintPath>
+ <HintPath>D:/UnityProject/UnityJungleWarClient/Assets/Demigiant/DemiLib/Core/DemiLib.dll</HintPath>
  </Reference>
  <Reference Include="DOTween">
- <HintPath>D:/UnityProject/OnlineGame/Assets/Demigiant/DOTween/DOTween.dll</HintPath>
+ <HintPath>D:/UnityProject/UnityJungleWarClient/Assets/Demigiant/DOTween/DOTween.dll</HintPath>
  </Reference>
  <Reference Include="DOTween43">
- <HintPath>D:/UnityProject/OnlineGame/Assets/Demigiant/DOTween/DOTween43.dll</HintPath>
+ <HintPath>D:/UnityProject/UnityJungleWarClient/Assets/Demigiant/DOTween/DOTween43.dll</HintPath>
  </Reference>
  <Reference Include="DOTween46">
- <HintPath>D:/UnityProject/OnlineGame/Assets/Demigiant/DOTween/DOTween46.dll</HintPath>
+ <HintPath>D:/UnityProject/UnityJungleWarClient/Assets/Demigiant/DOTween/DOTween46.dll</HintPath>
  </Reference>
  <Reference Include="DOTween50">
- <HintPath>D:/UnityProject/OnlineGame/Assets/Demigiant/DOTween/DOTween50.dll</HintPath>
+ <HintPath>D:/UnityProject/UnityJungleWarClient/Assets/Demigiant/DOTween/DOTween50.dll</HintPath>
  </Reference>
  <Reference Include="DOTweenPro">
- <HintPath>D:/UnityProject/OnlineGame/Assets/Demigiant/DOTweenPro/DOTweenPro.dll</HintPath>
+ <HintPath>D:/UnityProject/UnityJungleWarClient/Assets/Demigiant/DOTweenPro/DOTweenPro.dll</HintPath>
  </Reference>
  <Reference Include="Common">
- <HintPath>D:/UnityProject/OnlineGame/Assets/Plugins/Common.dll</HintPath>
+ <HintPath>D:/UnityProject/UnityJungleWarClient/Assets/Plugins/Common.dll</HintPath>
  </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

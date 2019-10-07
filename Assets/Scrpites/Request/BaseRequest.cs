@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Common;
+using System;
 
 public class BaseRequest : MonoBehaviour {
 
@@ -43,6 +44,9 @@ public class BaseRequest : MonoBehaviour {
 	
     public virtual void OnDestroy()
     {
-        GameFacade.Instance.RemoveRequest(actionCode);
+        if(facade!=null)
+        {
+            GameFacade.Instance.RemoveRequest(actionCode);
+        }
     }
 }

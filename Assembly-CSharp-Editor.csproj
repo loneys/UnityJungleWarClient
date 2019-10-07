@@ -6,7 +6,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{280B95F7-F24E-4ADF-1D22-BE40B246B1DF}</ProjectGuid>
+    <ProjectGuid>{263E1234-184F-7E56-3DE1-874B6AB804C1}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp-Editor</AssemblyName>
@@ -164,39 +164,39 @@
  <HintPath>D:/Program Files/Unity5.6.1/Editor/Data/PlaybackEngines/windowsstandalonesupport/UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
  </Reference>
  <Reference Include="DemiLib">
- <HintPath>D:/UnityProject/OnlineGame/Assets/Demigiant/DemiLib/Core/DemiLib.dll</HintPath>
+ <HintPath>D:/UnityProject/UnityJungleWarClient/Assets/Demigiant/DemiLib/Core/DemiLib.dll</HintPath>
  </Reference>
  <Reference Include="DemiEditor">
- <HintPath>D:/UnityProject/OnlineGame/Assets/Demigiant/DemiLib/Core/Editor/DemiEditor.dll</HintPath>
+ <HintPath>D:/UnityProject/UnityJungleWarClient/Assets/Demigiant/DemiLib/Core/Editor/DemiEditor.dll</HintPath>
  </Reference>
  <Reference Include="DOTween">
- <HintPath>D:/UnityProject/OnlineGame/Assets/Demigiant/DOTween/DOTween.dll</HintPath>
+ <HintPath>D:/UnityProject/UnityJungleWarClient/Assets/Demigiant/DOTween/DOTween.dll</HintPath>
  </Reference>
  <Reference Include="DOTween43">
- <HintPath>D:/UnityProject/OnlineGame/Assets/Demigiant/DOTween/DOTween43.dll</HintPath>
+ <HintPath>D:/UnityProject/UnityJungleWarClient/Assets/Demigiant/DOTween/DOTween43.dll</HintPath>
  </Reference>
  <Reference Include="DOTween46">
- <HintPath>D:/UnityProject/OnlineGame/Assets/Demigiant/DOTween/DOTween46.dll</HintPath>
+ <HintPath>D:/UnityProject/UnityJungleWarClient/Assets/Demigiant/DOTween/DOTween46.dll</HintPath>
  </Reference>
  <Reference Include="DOTween50">
- <HintPath>D:/UnityProject/OnlineGame/Assets/Demigiant/DOTween/DOTween50.dll</HintPath>
+ <HintPath>D:/UnityProject/UnityJungleWarClient/Assets/Demigiant/DOTween/DOTween50.dll</HintPath>
  </Reference>
  <Reference Include="DOTweenEditor">
- <HintPath>D:/UnityProject/OnlineGame/Assets/Demigiant/DOTween/Editor/DOTweenEditor.dll</HintPath>
+ <HintPath>D:/UnityProject/UnityJungleWarClient/Assets/Demigiant/DOTween/Editor/DOTweenEditor.dll</HintPath>
  </Reference>
  <Reference Include="DOTweenPro">
- <HintPath>D:/UnityProject/OnlineGame/Assets/Demigiant/DOTweenPro/DOTweenPro.dll</HintPath>
+ <HintPath>D:/UnityProject/UnityJungleWarClient/Assets/Demigiant/DOTweenPro/DOTweenPro.dll</HintPath>
  </Reference>
  <Reference Include="DOTweenProEditor">
- <HintPath>D:/UnityProject/OnlineGame/Assets/Demigiant/DOTweenPro/Editor/DOTweenProEditor.dll</HintPath>
+ <HintPath>D:/UnityProject/UnityJungleWarClient/Assets/Demigiant/DOTweenPro/Editor/DOTweenProEditor.dll</HintPath>
  </Reference>
  <Reference Include="Common">
- <HintPath>D:/UnityProject/OnlineGame/Assets/Plugins/Common.dll</HintPath>
+ <HintPath>D:/UnityProject/UnityJungleWarClient/Assets/Plugins/Common.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp.csproj">
-      <Project>{598BDEE7-27A9-3F2D-8C4A-0237A49E362D}</Project>      <Name>Assembly-CSharp</Name>    </ProjectReference>
+      <Project>{B219E3E1-1BC8-4350-98EF-796B083F0C87}</Project>      <Name>Assembly-CSharp</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

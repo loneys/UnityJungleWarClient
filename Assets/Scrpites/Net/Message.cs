@@ -58,7 +58,10 @@ public class Message{
                 ActionCode actionCode = (ActionCode)BitConverter.ToInt32(data, 4);
                 //解析出数据
                 string s = Encoding.UTF8.GetString(data, 8, count - 4);
-                Console.WriteLine("解析出来一条数据:" + actionCode + s);
+                if(actionCode!=ActionCode.Move)
+                {
+                    Console.WriteLine("解析出来一条数据:" + actionCode + s);
+                }
                 //触发回调
                 processDataCallBack(actionCode, s);
                 Array.Copy(data, count + 4, data, 0, startIndex - 4 - count);
@@ -85,7 +88,10 @@ public class Message{
 
     public static byte[] PackData(RequestCode requestCode,ActionCode actionCode, string data)
     {
-        Debug.LogWarning("发送一条消息:\n"+"类型:"+ requestCode + " 动作:" + actionCode + " 数据:" + data);
+        if(actionCode!=ActionCode.Move)
+        {
+            Debug.LogWarning("发送一条消息:\n" + "类型:" + requestCode + " 动作:" + actionCode + " 数据:" + data);
+        }
         //将消息号转换为字节数组
         byte[] requestCodeBytes = BitConverter.GetBytes((int)requestCode);
         //将消息动作转为字节数组

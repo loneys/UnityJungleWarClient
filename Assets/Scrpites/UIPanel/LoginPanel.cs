@@ -16,48 +16,50 @@ public class LoginPanel : BasePanel {
     //private Button loginButton;
     //private Button registerButton;
 
-    public override void OnEnter()
+    private void Start()
     {
-        base.OnEnter();
-        gameObject.SetActive(true);
-        transform.localScale = Vector3.zero;
-        transform.DOScale(1, 1);
-        transform.localPosition = new Vector3(1000, 0, 0);
-        transform.DOLocalMove(Vector3.zero, 1);
-
         usernameIF = transform.Find("UsernamePanel/UsernameInput").GetComponent<InputField>();
         passwordIF = transform.Find("PasswordPanel/PasswordInput").GetComponent<InputField>();
         loginRequest = GetComponent<LoginRequest>();
-
-
 
         closeButton = transform.Find("CloseButton").GetComponent<Button>();
         closeButton.onClick.AddListener(OnCloseClick);
 
         transform.Find("LoginButton").GetComponent<Button>().onClick.AddListener(OnLoginClick);
         transform.Find("RegisterButton").GetComponent<Button>().onClick.AddListener(OnRegisterButtonClick);
+    }
+
+    public override void OnEnter()
+    {
+        base.OnEnter();
+        EnterAnimation();
+    }
+
+    public override void OnPause()
+    {
+        HideAnimation();
 
     }
 
-
+    public override void OnResume()
+    {
+        EnterAnimation();
+    }
 
     private void OnCloseClick()
     {
-        transform.DOScale(0, 1f);
-        Tweener tweener = transform.DOLocalMove(new Vector3(1000, 0, 0), 0.2f);
-        tweener.OnComplete(() => uiManager.PopPanel());
-
-        
+        PlayClickSound();
+        uiManager.PopPanel();
     }
 
     public override void OnExit()
     {
-        base.OnExit();
-        gameObject.SetActive(false);
+        HideAnimation();
     }
 
     private void OnLoginClick()
     {
+        PlayClickSound();
         string msg = "";
         if(string.IsNullOrEmpty(usernameIF.text))
         {
@@ -78,6 +80,7 @@ public class LoginPanel : BasePanel {
 
     private void OnRegisterButtonClick()
     {
+        PlayClickSound();
         uiManager.PushPanel(UIPanelType.Register);
     }
 
@@ -87,10 +90,28 @@ public class LoginPanel : BasePanel {
         if (returnCode == ReturnCode.Success)
         {
             uiManager.ShowMessageSync("登录成功");
+            uiManager.PushPanelSync(UIPanelType.RoomList);
         }
         else
         {
             uiManager.ShowMessageSync("用户名或密码错误,无法登录,请重新输入");
         }
+    }
+
+    private void EnterAnimation()
+    {
+        gameObject.SetActive(true);
+        transform.localScale = Vector3.zero;
+        transform.DOScale(1, 1);
+        transform.localPosition = new Vector3(1000, 0, 0);
+        transform.DOLocalMove(Vector3.zero, 1);
+    }
+
+    private void HideAnimation()
+    {
+
+        transform.DOScale(0, 0.3f);
+
+        transform.DOLocalMoveX(1000, 0.3f).OnComplete(() => gameObject.SetActive(false));
     }
 }

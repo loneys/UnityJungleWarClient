@@ -23,7 +23,10 @@ public class RequestManager : BaseManager
     public void HandleReponse(ActionCode actionCode,string data)
     {
         BaseRequest request = requestDict.TryGet<ActionCode,BaseRequest>(actionCode);
-        Debug.LogWarning("接收一条消息:\n"+"动作:" + actionCode + " 数据:" + data);
+        if(actionCode!=ActionCode.Move)
+        {
+            Debug.LogWarning("接收一条消息:\n" + "动作:" + actionCode + " 数据:" + data);
+        }
         if (request == null)
         {
             Debug.LogWarning("无法得到ActionCode[" + actionCode + "]对应的方法");

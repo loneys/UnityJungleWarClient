@@ -1,6 +1,5 @@
 {
-"infoList":
-  [
+  "infoList": [
     {
       "panelTypeString": "Login",
       "path": "UIPanel/LoginPanel"
@@ -19,7 +18,18 @@
     {
       "panelTypeString": "Start",
       "path": "UIPanel/StartPanel"
+    },
+    {
+      "panelTypeString": "RoomList",
+      "path": "UIPanel/RoomListPanel"
+    },
+    {
+      "panelTypeString": "Room",
+      "path": "UIPanel/RoomPanel"
+    },
+    {
+      "panelTypeString": "Game",
+      "path": "UIPanel/GamePanel"
     }
-
   ]
 }

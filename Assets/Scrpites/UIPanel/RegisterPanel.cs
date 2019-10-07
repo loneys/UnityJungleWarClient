@@ -37,6 +37,7 @@ public class RegisterPanel : BasePanel {
 
     private void OnRegisterClick()
     {
+        PlayClickSound();
         Debug.LogWarning("--wangzhi--点击了注册按钮--");
         string msg = "";
         if(string.IsNullOrEmpty(usernameIF.text))
@@ -74,6 +75,7 @@ public class RegisterPanel : BasePanel {
 
     private void OnCloseClick()
     {
+        PlayClickSound();
         transform.DOScale(0, 1f);
         Tweener tweener = transform.DOLocalMove(new Vector3(1000, 0, 0), 0.2f);
         tweener.OnComplete(() => uiManager.PopPanel());
